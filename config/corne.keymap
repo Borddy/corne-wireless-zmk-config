@@ -35,10 +35,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&trans  &kp Q  &kp W       &kp F                   &kp P       &kp B        &kp J       &kp L       &kp U    &kp Y  &kp SEMI  &trans
-&trans  &kp A  &kp R  &hm S LALT              &hm T LGUI       &kp G        &kp M  &hm N RGUI  &hm E RALT    &kp I     &kp O  &trans
-&trans  &kp Z  &kp X       &kp C                   &kp D       &kp V        &kp K       &kp H   &kp COMMA  &kp DOT  &kp FSLH  &trans
-                          &trans  &mt LC(LS(LALT)) SPACE  &sk LSHIFT    &sk RCTRL       &to 1      &trans
+&none  &kp Q  &kp W       &kp F                   &kp P       &kp B        &kp J       &kp L       &kp U    &kp Y  &kp SEMI  &none
+&none  &kp A  &kp R  &hm LALT S              &hm LGUI T       &kp G        &kp M  &hm RGUI N  &hm RALT E    &kp I     &kp O  &none
+&none  &kp Z  &kp X       &kp C                   &kp D       &kp V        &kp K       &kp H   &kp COMMA  &kp DOT  &kp FSLH  &none
+                          &none  &mt LC(LS(LALT)) SPACE  &sk LSHIFT    &sk RCTRL       &to 1       &none
             >;
         };
 
