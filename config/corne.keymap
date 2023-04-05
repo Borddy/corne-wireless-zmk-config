@@ -22,6 +22,16 @@
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
+        lh: layer_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_HOLD";
+            bindings =
+                <&kp>,
+                <&tog>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+        };
     };
 
     keymap {
@@ -35,10 +45,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q  &kp W       &kp F                   &kp P       &kp B        &kp J       &kp L       &kp U    &kp Y  &kp SEMI  &none
-&none  &kp A  &kp R  &hm LALT S              &hm LGUI T       &kp G        &kp M  &hm RGUI N  &hm RALT E    &kp I     &kp O  &none
-&none  &kp Z  &kp X       &kp C                   &kp D       &kp V        &kp K       &kp H   &kp COMMA  &kp DOT  &kp FSLH  &none
-                          &none  &mt LC(LS(LALT)) SPACE  &sk LSHIFT    &sk RCTRL       &to 1       &none
+&none  &kp Q  &kp W       &kp F             &kp P       &kp B        &kp J        &kp L       &kp U    &kp Y  &kp SEMI  &none
+&none  &kp A  &kp R  &hm LALT S        &hm LGUI T       &kp G        &kp M   &hm RGUI N  &hm RALT E    &kp I     &kp O  &none
+&none  &kp Z  &kp X       &kp C             &kp D       &kp V        &kp K        &kp H   &kp COMMA  &kp DOT  &kp FSLH  &none
+                          &none  &mt LSHIFT SPACE  &sk LSHIFT    &sk RCTRL  &lh RCTRL 0       &none
             >;
         };
 
