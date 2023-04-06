@@ -3,8 +3,10 @@
  *
  * SPDX-License-Identifier: MIT
  */
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+
 / {
     behaviors {
         lh: layer_hold {
@@ -13,30 +15,37 @@
             bindings =
                 <&kp>,
                 <&to>;
+
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-unless-interrupted";
             tapping-term-ms = <200>;
         };
     };
+
     combos {
         compatible = "zmk,combos";
+
         lalt_combo {
             bindings = <&sk LS(LC(LALT))>;
             key-positions = <16 19>;
         };
-        lgui_combo {
-            bindings = <&kp TAB>;
+
+        layer0_combo {
+            bindings = <&to 0>;
             key-positions = <37 40>;
         };
     };
+
     keymap {
         compatible = "zmk,keymap";
+
         default_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
             // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+
             bindings = <
 &none  &kp Q  &kp W  &kp F            &kp P           &kp B                 &kp J         &kp L      &kp U    &kp Y  &kp SEMI  &none
 &none  &kp A  &kp R  &kp S            &kp T           &kp G                 &kp M         &kp N      &kp E    &kp I     &kp O  &none
@@ -44,7 +53,6 @@
                      &none  &mt LCTRL SPACE  &mt LGUI ENTER    &mt RALT BACKSPACE  &lh RSHIFT 1      &none
             >;
         };
-
 
         Layer__1 {
             bindings = <
@@ -54,6 +62,7 @@
                      &none  &lh LCTRL 0  &none    &none  &lh RSHIFT 2  &none
             >;
         };
+
         Layer__2 {
             bindings = <
 &none  &none  &none  &none        &none  &none    &none  &none  &none  &none  &none  &none
