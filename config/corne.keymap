@@ -31,6 +31,19 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+        lh_pht: left_hand_positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_HAND_POSITIONAL_HOLD_TAP";
+            bindings =
+                <&kp>,
+                <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+            flavor = "tap-unless-interrupted";
+            hold-trigger-key-positions = <19 20 21 22 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35>;
+        };
     };
 
     combos {
@@ -58,10 +71,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q  &kp W  &kp F             &kp P       &kp B                 &kp J       &kp L      &kp U    &kp Y  &kp SEMI  &none
-&none  &kp A  &kp R  &kp S             &kp T       &kp G                 &kp M       &kp N      &kp E    &kp I     &kp O  &none
-&none  &kp Z  &kp X  &kp C             &kp D       &kp V                 &kp K       &kp H  &kp COMMA  &kp DOT  &kp FSLH  &none
-                     &none  &mt LSHIFT SPACE  &sk LSHIFT    &hm RALT BACKSPACE  &lh RGUI 1      &none
+&none           &kp Q           &kp W            &kp F             &kp P       &kp B                 &kp J       &kp L      &kp U    &kp Y  &kp SEMI  &none
+&none  &lh_pht LGUI A  &lh_pht LALT R  &lh_pht LCTRL S  &lh_pht LSHIFT T       &kp G                 &kp M       &kp N      &kp E    &kp I     &kp O  &none
+&none           &kp Z           &kp X            &kp C             &kp D       &kp V                 &kp K       &kp H  &kp COMMA  &kp DOT  &kp FSLH  &none
+                                                 &none         &kp SPACE  &sk LSHIFT    &hm RALT BACKSPACE  &lh RGUI 1      &none
             >;
         };
 
