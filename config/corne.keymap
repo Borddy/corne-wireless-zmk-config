@@ -115,10 +115,10 @@
 
         GAMING {
             bindings = <
-&trans        &kp TAB  &kp Q     &kp W        &kp E      &kp R    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp BACKSPACE  &kp A     &kp S        &kp D      &kp F    &trans   &to 0  &trans  &trans  &trans  &trans
-&trans     &kp LSHIFT  &kp Z     &kp X        &kp C      &kp V    &trans  &trans  &trans  &trans  &trans  &trans
-                              &kp LALT  &lt 6 SPACE  &kp LCTRL    &trans  &trans  &trans
+&trans        &kp TAB  &kp Q     &kp W      &kp E  &kp R    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp BACKSPACE  &kp A     &kp S      &kp D  &kp F    &trans   &to 0  &trans  &trans  &trans  &trans
+&trans     &kp LSHIFT  &kp Z     &kp X      &kp C  &kp V    &trans  &trans  &trans  &trans  &trans  &trans
+                              &kp LALT  &kp SPACE  &sl 6    &trans  &trans  &trans
             >;
         };
 
