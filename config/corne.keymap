@@ -40,11 +40,13 @@
         del_combo {
             bindings = <&kp DELETE>;
             key-positions = <10 9>;
+            layers = <0>;
         };
 
         esc_combo {
             bindings = <&kp ESC>;
             key-positions = <1 2>;
+            layers = <0>;
         };
     };
 
