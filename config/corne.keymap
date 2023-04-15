@@ -10,17 +10,6 @@
 
 / {
     behaviors {
-        hm: homerow_mod {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MOD";
-            bindings =
-                <&kp>,
-                <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
         lt_sk: lt_sk {
             compatible = "zmk,behavior-hold-tap";
             label = "LT_SK";
@@ -29,6 +18,7 @@
                 <&sk>;
 
             #binding-cells = <2>;
+            flavor = "balanced";
         };
     };
 
@@ -57,10 +47,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q  &kp W  &kp F        &kp P      &kp B        &kp J            &kp L      &kp U    &kp Y  &kp SEMI  &none
-&none  &kp A  &kp R  &kp S        &kp T      &kp G        &kp M            &kp N      &kp E    &kp I     &kp O  &none
-&none  &kp Z  &kp X  &kp C        &kp D      &kp V        &kp K            &kp H  &kp COMMA  &kp DOT  &kp FSLH  &none
-                     &none  &lt 1 SPACE  &kp ENTER    &kp ENTER  &lt_sk 2 RSHIFT    &lt 3 0
+&none  &kp Q  &kp W  &kp F        &kp P      &kp B            &kp J            &kp L      &kp U    &kp Y  &kp SEMI  &none
+&none  &kp A  &kp R  &kp S        &kp T      &kp G            &kp M            &kp N      &kp E    &kp I     &kp O  &none
+&none  &kp Z  &kp X  &kp C        &kp D      &kp V            &kp K            &kp H  &kp COMMA  &kp DOT  &kp FSLH  &none
+                     &none  &lt 1 SPACE  &kp ENTER    &kp BACKSPACE  &lt_sk 2 RSHIFT    &lt 3 0
             >;
         };
 
