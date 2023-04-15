@@ -97,7 +97,7 @@
 
         FN {
             bindings = <
-&none  &kp F1   &kp F2   &kp F3   &kp F4    &bt BT_CLR    &bt BT_SEL 2    &bw  &none  &none  &none  &none
+&none  &kp F1   &kp F2   &kp F3   &kp F4    &bt BT_CLR    &bt BT_SEL 2    &bw  &to 5  &none  &none  &none
 &none  &kp F5   &kp F6   &kp F7   &kp F8  &bt BT_SEL 0    &bt BT_SEL 3  &none  &none  &none  &none  &none
 &none  &kp F9  &kp F10  &kp F11  &kp F12  &bt BT_SEL 1    &bt BT_SEL 4  &none  &none  &none  &none  &none
                           &none    &none         &none           &none  &none  &none
@@ -110,6 +110,24 @@
 &none  &none  &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &kp LEFT    &kp DOWN     &kp UP  &kp RIGHT  &none  &none
 &none  &none           &none         &none           &none            &none    &kp HOME   &kp PG_DN  &kp PG_UP    &kp END  &none  &none
                                      &none           &to 0            &none       &none  &kp RSHIFT      &none
+            >;
+        };
+
+        GAMING {
+            bindings = <
+&trans        &kp TAB  &kp Q     &kp W        &kp E      &kp R    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp BACKSPACE  &kp A     &kp S        &kp D      &kp F    &trans   &to 0  &trans  &trans  &trans  &trans
+&trans     &kp LSHIFT  &kp Z     &kp X        &kp C      &kp V    &trans  &trans  &trans  &trans  &trans  &trans
+                              &kp LALT  &lt 6 SPACE  &kp LCTRL    &trans  &trans  &trans
+            >;
+        };
+
+        GAMING_2 {
+            bindings = <
+&trans  &kp N1  &kp N2  &kp W  &kp N3  &kp N4    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N5   &kp A  &kp S   &kp D  &kp N6    &trans   &to 0  &trans  &trans  &trans  &trans
+&trans   &kp 0   &kp 0  &kp 0   &kp 0   &kp 0    &trans  &trans  &trans  &trans  &trans  &trans
+                        &kp 0  &trans   &kp 0    &trans  &trans  &trans
             >;
         };
     };
