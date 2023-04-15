@@ -84,7 +84,7 @@
         NAV {
             bindings = <
 &none  &none  &none  &none  &none  &none       &none     &none   &none      &none  &none  &none
-&none  &none  &none  &none  &none  &none    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none  &none
+&none  &none  &kp A  &none  &none  &none    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none  &none
 &none  &none  &none  &none  &none  &none       &none     &none   &none      &none  &none  &none
                      &none  &none  &none       &none     &none   &none
             >;
